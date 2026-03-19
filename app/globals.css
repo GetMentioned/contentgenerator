@@ -1,4 +1,11 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/InterDisplay.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
