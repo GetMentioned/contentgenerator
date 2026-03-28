@@ -18,12 +18,35 @@ import { ASPECT_DIMENSIONS } from "@/lib/types"
 const BG_IMAGES: Record<BgColor, string> = {
   black: "/black.jpg",
   blue: "/blue.jpg",
+  "gradient-1": "/gradient-1.webp",
+  "gradient-2": "/gradient-2.webp",
+  "gradient-3": "/gradient-3.webp",
+  "gradient-4": "/gradient-4.webp",
+  "gradient-5": "/gradient-5.webp",
+  "gradient-6": "/gradient-6.webp",
 }
 
 const LOGOS: Record<BgColor, string> = {
   black: "/logo-blue.svg",
   blue: "/logo-white.svg",
+  "gradient-1": "/logo-white.svg",
+  "gradient-2": "/logo-white.svg",
+  "gradient-3": "/logo-white.svg",
+  "gradient-4": "/logo-white.svg",
+  "gradient-5": "/logo-white.svg",
+  "gradient-6": "/logo-white.svg",
 }
+
+const GRADIENT_SERIES = [
+  "#FFFFFF",
+  "#34D399",
+  "#F59E0B",
+  "#EF4444",
+  "#A78BFA",
+  "#F472B6",
+  "#06B6D4",
+  "#84CC16",
+]
 
 const SERIES_COLORS: Record<BgColor, string[]> = {
   black: [
@@ -36,16 +59,13 @@ const SERIES_COLORS: Record<BgColor, string[]> = {
     "#06B6D4",
     "#84CC16",
   ],
-  blue: [
-    "#FFFFFF",
-    "#34D399",
-    "#F59E0B",
-    "#EF4444",
-    "#A78BFA",
-    "#F472B6",
-    "#06B6D4",
-    "#84CC16",
-  ],
+  blue: GRADIENT_SERIES,
+  "gradient-1": GRADIENT_SERIES,
+  "gradient-2": GRADIENT_SERIES,
+  "gradient-3": GRADIENT_SERIES,
+  "gradient-4": GRADIENT_SERIES,
+  "gradient-5": GRADIENT_SERIES,
+  "gradient-6": GRADIENT_SERIES,
 }
 
 const DEFAULT_DATA: ChartData = {
@@ -92,7 +112,7 @@ export function ChartTemplate({
         height: dims.height,
         position: "relative",
         overflow: "hidden",
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: "'Suisse Intl', sans-serif",
         display: "flex",
         flexDirection: "column",
       }}
@@ -127,10 +147,10 @@ export function ChartTemplate({
           style={{
             color: "white",
             fontSize: 64,
-            fontWeight: 600,
+            fontWeight: 500,
             lineHeight: 1.1,
             margin: 0,
-            fontFamily: "'Inter Display', 'Inter', sans-serif",
+            fontFamily: "'Suisse Intl', sans-serif",
             whiteSpace: "pre-line",
             flexShrink: 0,
           }}
@@ -251,7 +271,7 @@ export function ChartTemplate({
             style={{
               color: "rgba(255,255,255,0.6)",
               fontSize: 20,
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Suisse Intl', sans-serif",
               letterSpacing: "-0.4px",
             }}
           >

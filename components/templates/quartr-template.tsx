@@ -40,7 +40,7 @@ export function QuartrTemplate({
         height: dims.height,
         position: "relative",
         overflow: "hidden",
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: "'Suisse Intl', sans-serif",
         backgroundColor: "#000",
       }}
     >
@@ -94,7 +94,7 @@ export function QuartrTemplate({
             style={{
               color: "white",
               fontSize: 14,
-              fontWeight: 600,
+              fontWeight: 500,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               opacity: 0.8,
@@ -106,7 +106,7 @@ export function QuartrTemplate({
             style={{
               color: "white",
               fontSize: 14,
-              fontWeight: 600,
+              fontWeight: 500,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               opacity: 0.8,
@@ -135,7 +135,7 @@ export function QuartrTemplate({
               letterSpacing: "-1.2px",
               lineHeight: 1.15,
               margin: 0,
-              fontFamily: "'Inter Display', 'Inter', sans-serif",
+              fontFamily: "'Suisse Intl', sans-serif",
               overflowWrap: "break-word",
               width: "100%",
               textAlign: "center",
@@ -165,7 +165,7 @@ export function QuartrTemplate({
             style={{
               color: "rgba(255,255,255,0.6)",
               fontSize: 20,
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Suisse Intl', sans-serif",
               letterSpacing: "-0.4px",
             }}
           >

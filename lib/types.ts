@@ -60,7 +60,7 @@ export interface QuartrData {
 export type TemplateType = "visibility-ranking" | "top-domains" | "chart" | "image" | "quartr"
 
 export type AspectRatio = "square" | "horizontal" | "portrait"
-export type BgColor = "black" | "blue"
+export type BgColor = "black" | "blue" | "gradient-1" | "gradient-2" | "gradient-3" | "gradient-4" | "gradient-5" | "gradient-6"
 
 export const ASPECT_DIMENSIONS: Record<AspectRatio, { width: number; height: number }> = {
   square: { width: 1080, height: 1080 },

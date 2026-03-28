@@ -1,4 +1,5 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Geist_Mono } from "next/font/google"
+import localFont from "next/font/local"
 import { Agentation } from "agentation"
 
 import "./globals.css"
@@ -6,7 +7,13 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+const suisseIntl = localFont({
+  src: [
+    { path: "../public/SuisseIntl-Regular.woff2", weight: "400" },
+    { path: "../public/SuisseIntl-Medium.woff2", weight: "500" },
+  ],
+  variable: "--font-sans",
+})
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
@@ -22,7 +29,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn("antialiased", fontMono.variable, "font-sans", suisseIntl.variable)}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>

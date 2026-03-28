@@ -563,25 +563,28 @@ export default function EditorPage() {
           {template !== "quartr" && (
             <div className="flex flex-col gap-3">
               <label className="text-xs font-medium text-muted-foreground">Background</label>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => setBgColor("black")}
-                  className={cn(
-                    "size-16 rounded-lg overflow-hidden border-2",
-                    bgColor === "black" ? "border-ring ring-2 ring-ring/30" : "border-border"
-                  )}
-                >
-                  <img src="/black.jpg" alt="Black" className="size-full object-cover" />
-                </button>
-                <button
-                  onClick={() => setBgColor("blue")}
-                  className={cn(
-                    "size-16 rounded-lg overflow-hidden border-2",
-                    bgColor === "blue" ? "border-ring ring-2 ring-ring/30" : "border-border"
-                  )}
-                >
-                  <img src="/blue.jpg" alt="Blue" className="size-full object-cover" />
-                </button>
+              <div className="flex gap-2 flex-wrap">
+                {([
+                  { value: "black" as const, src: "/black.jpg", alt: "Black" },
+                  { value: "blue" as const, src: "/blue.jpg", alt: "Blue" },
+                  { value: "gradient-1" as const, src: "/gradient-1.webp", alt: "Gradient 1" },
+                  { value: "gradient-2" as const, src: "/gradient-2.webp", alt: "Gradient 2" },
+                  { value: "gradient-3" as const, src: "/gradient-3.webp", alt: "Gradient 3" },
+                  { value: "gradient-4" as const, src: "/gradient-4.webp", alt: "Gradient 4" },
+                  { value: "gradient-5" as const, src: "/gradient-5.webp", alt: "Gradient 5" },
+                  { value: "gradient-6" as const, src: "/gradient-6.webp", alt: "Gradient 6" },
+                ]).map(({ value, src, alt }) => (
+                  <button
+                    key={value}
+                    onClick={() => setBgColor(value)}
+                    className={cn(
+                      "size-16 rounded-lg overflow-hidden border-2",
+                      bgColor === value ? "border-ring ring-2 ring-ring/30" : "border-border"
+                    )}
+                  >
+                    <img src={src} alt={alt} className="size-full object-cover" />
+                  </button>
+                ))}
               </div>
             </div>
           )}

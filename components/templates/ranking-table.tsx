@@ -12,16 +12,34 @@ import {
 const BG_COLORS: Record<BgColor, string> = {
   black: "#050711",
   blue: "#0A1628",
+  "gradient-1": "#1a3a8a",
+  "gradient-2": "#1a3a8a",
+  "gradient-3": "#1a3a8a",
+  "gradient-4": "#1a3a8a",
+  "gradient-5": "#1a3a8a",
+  "gradient-6": "#1a3a8a",
 }
 
 const BG_IMAGES: Record<BgColor, string> = {
   black: "/black.jpg",
   blue: "/blue.jpg",
+  "gradient-1": "/gradient-1.webp",
+  "gradient-2": "/gradient-2.webp",
+  "gradient-3": "/gradient-3.webp",
+  "gradient-4": "/gradient-4.webp",
+  "gradient-5": "/gradient-5.webp",
+  "gradient-6": "/gradient-6.webp",
 }
 
 const LOGOS: Record<BgColor, string> = {
   black: "/logo-blue.svg",
   blue: "/logo-white.svg",
+  "gradient-1": "/logo-white.svg",
+  "gradient-2": "/logo-white.svg",
+  "gradient-3": "/logo-white.svg",
+  "gradient-4": "/logo-white.svg",
+  "gradient-5": "/logo-white.svg",
+  "gradient-6": "/logo-white.svg",
 }
 
 const DEFAULT_DATA: RankingData = {
@@ -51,7 +69,7 @@ function ChangeIndicator({ value, suffix = "%", showSign = true }: { value: numb
         padding: "2px 8px",
         borderRadius: "4px",
         fontSize: "0.75em",
-        fontWeight: 500,
+        fontWeight: 400,
         marginLeft: "6px",
         whiteSpace: "nowrap",
       }}
@@ -84,7 +102,7 @@ export function RankingTable({
         backgroundColor: BG_COLORS[bgColor],
         position: "relative",
         overflow: "hidden",
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: "'Suisse Intl', sans-serif",
         display: "flex",
         flexDirection: "column",
       }}
@@ -134,7 +152,7 @@ export function RankingTable({
               letterSpacing: "-1.6px",
               lineHeight: 1.15,
               margin: 0,
-              fontFamily: "'Inter Display', 'Inter', sans-serif",
+              fontFamily: "'Suisse Intl', sans-serif",
               textAlign: "center",
               overflowWrap: "break-word",
               width: "100%",
@@ -184,7 +202,7 @@ export function RankingTable({
                     fontSize: `16px`,
                   }}
                 >
-                  <span style={{ color: "#6b7280", fontWeight: 500, fontVariantNumeric: "tabular-nums" }}>{item.rank}</span>
+                  <span style={{ color: "#6b7280", fontWeight: 400, fontVariantNumeric: "tabular-nums" }}>{item.rank}</span>
                   <span style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                     {(item.logo || item.domain) && (() => {
                       const logoImg = (
@@ -210,7 +228,7 @@ export function RankingTable({
                         </TooltipProvider>
                       ) : logoImg
                     })()}
-                    <span style={{ fontWeight: 500, color: "#111827" }}>{item.name}</span>
+                    <span style={{ fontWeight: 400, color: "#111827" }}>{item.name}</span>
                   </span>
                   <span style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontVariantNumeric: "tabular-nums" }}>
                     <strong style={{ color: "#111827" }}>{item.visibility.toFixed(1)}%</strong>
@@ -245,7 +263,7 @@ export function RankingTable({
             style={{
               color: "rgba(255,255,255,0.6)",
               fontSize: `20px`,
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Suisse Intl', sans-serif",
               letterSpacing: "-0.4px",
             }}
           >

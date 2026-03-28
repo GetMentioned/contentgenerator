@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Inter Display";
-  src: url("/InterDisplay.ttf") format("truetype");
-  font-weight: 100 900;
+  font-family: "Suisse Intl";
+  src: url("/SuisseIntl-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("/SuisseIntl-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-display: swap;
 }
 @import "tw-animate-css";

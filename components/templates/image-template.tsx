@@ -7,11 +7,23 @@ import { ASPECT_DIMENSIONS } from "@/lib/types"
 const BG_IMAGES: Record<BgColor, string> = {
   black: "/black.jpg",
   blue: "/blue.jpg",
+  "gradient-1": "/gradient-1.webp",
+  "gradient-2": "/gradient-2.webp",
+  "gradient-3": "/gradient-3.webp",
+  "gradient-4": "/gradient-4.webp",
+  "gradient-5": "/gradient-5.webp",
+  "gradient-6": "/gradient-6.webp",
 }
 
 const LOGOS: Record<BgColor, string> = {
   black: "/logo-blue.svg",
   blue: "/logo-white.svg",
+  "gradient-1": "/logo-white.svg",
+  "gradient-2": "/logo-white.svg",
+  "gradient-3": "/logo-white.svg",
+  "gradient-4": "/logo-white.svg",
+  "gradient-5": "/logo-white.svg",
+  "gradient-6": "/logo-white.svg",
 }
 
 const DEFAULT_DATA: ImageTemplateData = {
@@ -152,7 +164,7 @@ export function ImageTemplate({
         height: dims.height,
         position: "relative",
         overflow: "hidden",
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: "'Suisse Intl', sans-serif",
         display: "flex",
         flexDirection: "column",
       }}
@@ -191,7 +203,7 @@ export function ImageTemplate({
             letterSpacing: "-1.6px",
             lineHeight: 1.15,
             margin: 0,
-            fontFamily: "'Inter Display', 'Inter', sans-serif",
+            fontFamily: "'Suisse Intl', sans-serif",
             textAlign: "center",
             overflowWrap: "break-word",
             width: "100%",
@@ -227,7 +239,7 @@ export function ImageTemplate({
             style={{
               color: "rgba(255,255,255,0.6)",
               fontSize: 20,
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Suisse Intl', sans-serif",
               letterSpacing: "-0.4px",
             }}
           >
